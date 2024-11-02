@@ -1,8 +1,9 @@
 name: "Deploy to AWs"
 
+
 on: workflow_dispatch
 
-jobs:
+ jobs:
     deploy:
         runs-on: self-hosted
 
@@ -25,4 +26,4 @@ jobs:
               run: npm test
             
             - name: "Deploy to AWS"
-              run: pm2 start
+              run: pm2 start src/index.js
